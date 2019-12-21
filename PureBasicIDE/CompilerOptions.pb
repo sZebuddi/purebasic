@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -809,13 +809,13 @@ Procedure OptionWindowEvents(EventID)
               UpdateSourceStatus(1) ; set the changed flag
             EndIf
             
-            ; update the hilightning if EnableASM changes
+            ; update the highlighting if EnableASM changes
             ;
             OldEnableASM = *ActiveSource\EnableASM
             GetTargetOptions(*ActiveSource)
             
             If OldEnableASM <> *ActiveSource\EnableASM
-              UpdateHilightning()
+              UpdateHighLighting()
             EndIf
             
             SetDebuggerMenuStates() ; update the debugger menu state, as we can enable/disable it in the compiler options

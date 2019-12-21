@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -616,7 +616,7 @@ Procedure ProjectPanelMenuEvent(MenuItemID)
             Debug FileName$
             
             ; If the file doesn't exist, ask to create it, to ease the integration
-            ; http://www.purebasic.fr/english/viewtopic.php?f=4&t=47521
+            ; https://www.purebasic.fr/english/viewtopic.php?f=4&t=47521
             ;
             If FileSize(FileName$) < 0
               If MessageRequester(Language("FileStuff","AddNewFileTitle"), LanguagePattern("FileStuff","AddNewFileQuestion", "%filename%", Filename$), #PB_MessageRequester_YesNo | #FLAG_Question) = #PB_MessageRequester_Yes

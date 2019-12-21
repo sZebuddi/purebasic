@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.71 LTS (Windows - x64)">
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.71 LTS (Windows - x86)">
   <section name="config">
     <options closefiles="1" openmode="0" name="PureBasic IDE - 5.70"/>
   </section>
@@ -170,44 +170,44 @@
     <file name="FindWindow.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
-    <file name="FormDesigner\codeviewer.pb">
+    <file name="FormDesigner\CodeViewer.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\copypaste.pb">
+    <file name="FormDesigner\CopyPaste.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\declare.pb">
+    <file name="FormDesigner\Declare.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
     <file name="FormDesigner\FormManagement.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\gadgetitemswindow.pb">
+    <file name="FormDesigner\GadgetItemsWindow.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\grid.pbi">
+    <file name="FormDesigner\Grid.pbi">
       <config load="0" scan="1" panel="1" warn="1" lastopen="0" panelstate="++"/>
       <fingerprint md5="4470b709305854df50d9f32f27b60ed7"/>
     </file>
-    <file name="FormDesigner\helpingfunctions.pb">
+    <file name="FormDesigner\HelpingFunctions.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\imageslistwindow.pb">
+    <file name="FormDesigner\ImagesListWindow.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\mainevents.pb">
+    <file name="FormDesigner\MainEvents.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\mainwindow.pb">
+    <file name="FormDesigner\MainWindow.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\opensave.pb">
+    <file name="FormDesigner\OpenSave.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\splitterwindow.pb">
+    <file name="FormDesigner\SplitterWindow.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
-    <file name="FormDesigner\undoredo.pb">
+    <file name="FormDesigner\UndoRedo.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="++"/>
     </file>
     <file name="GotoWindow.pb">
@@ -222,10 +222,10 @@
     <file name="HelpViewer.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
-    <file name="HilightningEngine.pb">
+    <file name="HighLightingEngine.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
-    <file name="HilightningFunctions.pb">
+    <file name="HighLightingFunctions.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
     <file name="IDEDebugger.pb">
@@ -286,7 +286,7 @@
     <file name="RecentFiles.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
-    <file name="ScintillaHilightning.pb">
+    <file name="ScintillaHighLighting.pb">
       <config load="0" scan="1" panel="1" warn="0" lastopen="0" panelstate="+"/>
     </file>
     <file name="ShortcutManagement.pb">

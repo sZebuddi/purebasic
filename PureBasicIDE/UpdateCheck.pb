@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ Procedure ReadVersionFile(FileName$, List Releases.Release())
     If XMLStatus(#XML_UpdateCheck) = #PB_XML_Success And MainXMLNode(#XML_UpdateCheck)
       ; check the namespace
       *AllVersions = MainXMLNode(#XML_UpdateCheck)
-      If ResolveXMLNodeName(*AllVersions, "/") = #ProductWebSite$ + "/namespace/versions"
+      If ResolveXMLNodeName(*AllVersions, "/") = #UpdateCheckNamespace$ + "/versions"
         
         ; examine child nodes
         *Version = ChildXMLNode(*AllVersions)
@@ -404,7 +404,7 @@ Procedure CheckForUpdatesSchedule()
       UpdateCheck_Start()
       
     Case #UPDATE_Interval_Weekly
-      If Date() > LastUpdateCheck + (7 * 24 * 60 * 60 * 60)
+      If Date() > LastUpdateCheck + (7 * 24 * 60 * 60)
         UpdateCheck_Start()
       EndIf
       

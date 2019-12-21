@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -51,7 +51,9 @@ CompilerEndIf
 
 CompilerIf #SpiderBasic
   #ProductName$ = "SpiderBasic"
-  #ProductWebSite$ = "http://www.spiderbasic.com"
+  #ProductWebSite$ = "https://www.spiderbasic.com"
+  #ProjectFileNamespace$ = "http://www.purebasic.com/namespace" ; SBP uses PBP namespace
+  #UpdateCheckNamespace$ = "http://www.spiderbasic.com/namespace"
   
   #SourceFileExtension  = ".sb"
   #IncludeFileExtension = ".sbi"
@@ -61,7 +63,9 @@ CompilerIf #SpiderBasic
   #CatalogFileIDE = "SB_IDE"
 CompilerElse
   #ProductName$ = "PureBasic"
-  #ProductWebSite$ = "http://www.purebasic.com"
+  #ProductWebSite$ = "https://www.purebasic.com"
+  #ProjectFileNamespace$ = "http://www.purebasic.com/namespace"
+  #UpdateCheckNamespace$ = "http://www.purebasic.com/namespace"
   
   #SourceFileExtension  = ".pb"
   #IncludeFileExtension = ".pbi"
@@ -284,7 +288,7 @@ CompilerSelect #PB_Compiler_OS
     #DEFAULT_FunctionFile       = "pbfunctions.txt"  ; related to Temp$ path
     #DEFAULT_ApiFile            = "compilers/apifunctions.txt" ; related to PB path
     
-    #DEFAULT_NewLineType        = 1 ; lf (on OS X, the norm is now lf, no more 'cr' http://www.purebasic.fr/english/viewtopic.php?f=24&t=55391)
+    #DEFAULT_NewLineType        = 1 ; lf (on OS X, the norm is now lf, no more 'cr' https://www.purebasic.fr/english/viewtopic.php?f=24&t=55391)
     #DEFAULT_DLLExtension       = "so"
     
     #DEFAULT_ImageBorder        = 0 ; for colorpicker

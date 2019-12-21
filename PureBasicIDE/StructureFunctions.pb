@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -697,8 +697,8 @@ Procedure FindStructureInterface(Name$, Type, List Output.s(), Recursion)
         If CompareMemoryString(@Name$, @InterfaceList(i), #PB_String_NoCase) = #PB_String_Equal
           
           ; Request structure content
-          CompilerWrite("INTERFACE"+Chr(9)+Trim(Name$))
           ForceDefaultCompiler()
+          CompilerWrite("INTERFACE"+Chr(9)+Trim(Name$))
           Repeat
             Response$ = CompilerRead()
             

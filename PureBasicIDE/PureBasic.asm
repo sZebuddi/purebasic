@@ -154,7 +154,7 @@ PB_DllInit:
 ; 
 ; 
 ; 
-; XIncludeFile "../HilightningEngine.pb"
+; XIncludeFile "../HighLightingEngine.pb"
 ; 
 ; 
 ; 
@@ -1346,7 +1346,7 @@ End120:
 ; 
 ; 
 ; 
-; HilightningEngine(*Buffer, Length, -1, @DllCallback(), EnableASM)
+; HighLightingEngine(*Buffer, Length, -1, @DllCallback(), EnableASM)
   SUB    rsp,8
   PUSH   qword [rsp+PS42+32]
   LEA    rax,[_Procedure38]
@@ -1699,7 +1699,7 @@ _EndProcedure27:
   POP    r15
   POP    rbp
   RET
-; Procedure HilightningEngine(*InBuffer, InBufferLength, CursorPosition, Callback.HilightCallback, IsSourceCode)
+; Procedure HighLightingEngine(*InBuffer, InBufferLength, CursorPosition, Callback.HilightCallback, IsSourceCode)
 _Procedure34:
   MOV    qword [rsp+8],rcx
   MOV    qword [rsp+16],rdx
@@ -6482,7 +6482,7 @@ _Procedure40:
   MOV    qword [v_EnableCaseCorrection],0
 ; EnableKeywordBolding = 0
   MOV    qword [v_EnableKeywordBolding],0
-; LoadHilightningFiles = 0 
+; LoadHighLightingFiles = 0 
   MOV    qword [rsp+40],0
 ; 
 ; 
@@ -6501,7 +6501,7 @@ _Procedure40:
 ; 
 ; InitSyntaxCheckArrays()
   CALL  _Procedure10
-; InitSyntaxHilightning()  
+; InitSyntaxHighLighting()  
   CALL  _Procedure12
 ; 
 ; EndProcedure
@@ -8097,7 +8097,7 @@ _EndProcedure7:
   POP    r15
   POP    rbp
   RET
-; Procedure InitSyntaxHilightning()  
+; Procedure InitSyntaxHighLighting()  
 _Procedure12:
   PUSH   rbp
   PUSH   r15
@@ -8177,11 +8177,11 @@ _Next40:
 ; 
 ; 
 ; If APIFunctionsRead = 0  
-  MOV    r15,qword [so_InitSyntaxHilightning.v_APIFunctionsRead]
+  MOV    r15,qword [so_InitSyntaxHighLighting.v_APIFunctionsRead]
   AND    r15,r15
   JNE   _EndIf42
 ; APIFunctionsRead = 1
-  MOV    qword [so_InitSyntaxHilightning.v_APIFunctionsRead],1
+  MOV    qword [so_InitSyntaxHighLighting.v_APIFunctionsRead],1
 ; 
 ; NbAPIFunctions = 0
   MOV    qword [v_NbApiFunctions],0
@@ -8269,7 +8269,7 @@ _EndIf42:
 ; 
 ; 
 ; 
-; IsHilightningReady = 1
+; IsHighLightingReady = 1
   MOV    qword [rsp+64],1
 ; 
 ; EndProcedure
@@ -8392,7 +8392,7 @@ v_DummySource rb 16
 pb_bssalign 8
 so_ToAscii.p_Buffer rq 1
 so_ToAscii.v_BufferLength rq 1
-so_InitSyntaxHilightning.v_APIFunctionsRead rq 1
+so_InitSyntaxHighLighting.v_APIFunctionsRead rq 1
 pb_bssalign 8
 pb_bssalign 8
 a_ValidCharacters:

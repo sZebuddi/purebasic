@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ Procedure CodeViewer_UpdateHilight(Gadget)
   If *Buffer
     ScintillaSendMessage(Gadget, #SCI_GETTEXT, Size+1, *Buffer)
     ScintillaSendMessage(Gadget, #SCI_STARTSTYLING, 0, $FFFFFF)
-    HilightningEngine(*Buffer, Size, 0, @CodeViewer_HilightCallback(), 0)
+    HighLightingEngine(*Buffer, Size, 0, @CodeViewer_HilightCallback(), 0)
     FreeMemory(*Buffer)
   EndIf
   

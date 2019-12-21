@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ Procedure IsProjectFile(FileName$)
     ;
     If LoadXML(#XML_CheckProject, FileName$)
       If XMLStatus(#XML_CheckProject) = #PB_XML_Success And MainXMLNode(#XML_CheckProject)
-        If ResolveXMLNodeName(MainXMLNode(#XML_CheckProject), "/") = "http://www.purebasic.com/namespace/project"
+        If ResolveXMLNodeName(MainXMLNode(#XML_CheckProject), "/") = #ProjectFileNamespace$ + "/project"
           Result = #True
         EndIf
       EndIf
@@ -175,7 +175,7 @@ Procedure.s ProjectName(FileName$) ; Get the project name from a project file
   
   If LoadXML(#XML_CheckProject, FileName$)
     If XMLStatus(#XML_CheckProject) = #PB_XML_Success And MainXMLNode(#XML_CheckProject)
-      If ResolveXMLNodeName(MainXMLNode(#XML_CheckProject), "/") = "http://www.purebasic.com/namespace/project"
+      If ResolveXMLNodeName(MainXMLNode(#XML_CheckProject), "/") = #ProjectFileNamespace$ + "/project"
         *Config = GetSection(MainXMLNode(#XML_CheckProject), "config")
         If *Config
           *Options = XMLNodeFromPath(*Config, "options")
@@ -825,7 +825,7 @@ Procedure IsPureBasicFile(FileName$)
     IsLoaded = 0
     If LoadXML(#XML_LoadProject, FileName$)
       If XMLStatus(#XML_LoadProject) = #PB_XML_Success And MainXMLNode(#XML_LoadProject)
-        If ResolveXMLNodeName(MainXMLNode(#XML_LoadProject), "/") = "http://www.purebasic.com/namespace/project"
+        If ResolveXMLNodeName(MainXMLNode(#XML_LoadProject), "/") = #ProjectFileNamespace$ + "/project"
           IsLoaded = 1
         EndIf
       EndIf
@@ -1322,7 +1322,7 @@ Procedure IsPureBasicFile(FileName$)
       ; Generate main node
       ;
       *Main = CreateXMLNode(RootXMLNode(#XML_SaveProject), "project")
-      SetXMLAttribute(*Main, "xmlns",   "http://www.purebasic.com/namespace")
+      SetXMLAttribute(*Main, "xmlns",   #ProjectFileNamespace$)
       SetXMLAttribute(*Main, "version", #Project_VersionString)
       SetXMLAttribute(*Main, "creator", DefaultCompiler\VersionString$)
       

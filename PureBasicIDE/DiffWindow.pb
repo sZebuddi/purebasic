@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -997,7 +997,7 @@ Procedure UpdateDiffGadget(IsLeft, List Style.DiffStyleBlock(), SetText)
     DiffStyleGadget = Gadget
     ScintillaSendMessage(Gadget, #SCI_STARTSTYLING, 0, $1F)
     If DiffShowColors
-      HilightningEngine(*Buffer, Length-1, 0, @DiffHilightCallback(), 0)
+      HighLightingEngine(*Buffer, Length-1, 0, @DiffHilightCallback(), 0)
     Else
       ; no hilighting engine used here. just set the text color for everything
       ScintillaSendMessage(Gadget, #SCI_SETSTYLING, Length-1, 1)

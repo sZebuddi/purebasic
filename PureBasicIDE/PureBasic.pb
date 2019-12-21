@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -40,7 +40,7 @@ XIncludeFile "Declarations.pb"
 XIncludeFile "Macro.pb"
 XIncludeFile ".." + #Separator + "PureBasicConfigPath.pb" ; for the config directory
 XIncludeFile "RemoteProcedureCall.pb"
-XIncludeFile "FormDesigner/declare.pb"
+XIncludeFile "FormDesigner/Declare.pb"
 ; must be here to affect all OpenWindow() calls with a macro
 XIncludeFile "LinuxWindowIcon.pb"
 XIncludeFile "ZLib.pb"
@@ -101,21 +101,21 @@ XIncludeFile "Language.pb"
 XIncludeFile "ZipManagement.pb"
 XIncludeFile "ToolbarManagement.pb"
 XIncludeFile "ThemeManagement.pb"
-XIncludeFile "HilightningEngine.pb"
-XIncludeFile "HilightningFunctions.pb"
+XIncludeFile "HighLightingEngine.pb"
+XIncludeFile "HighLightingFunctions.pb"
 XIncludeFile "ShortcutManagement.pb"
 XIncludeFile "ProjectManagement.pb"
-XIncludeFile "FormDesigner/grid.pbi"
-XIncludeFile "FormDesigner/undoredo.pb"
-XIncludeFile "FormDesigner/helpingfunctions.pb"
-XIncludeFile "FormDesigner/gadgetitemswindow.pb"
-XIncludeFile "FormDesigner/imageslistwindow.pb"
-XIncludeFile "FormDesigner/splitterwindow.pb"
-XIncludeFile "FormDesigner/codeviewer.pb"
-XIncludeFile "FormDesigner/mainevents.pb"
-XIncludeFile "FormDesigner/copypaste.pb"
-XIncludeFile "FormDesigner/opensave.pb"
-XIncludeFile "FormDesigner/mainwindow.pb"
+XIncludeFile "FormDesigner/Grid.pbi"
+XIncludeFile "FormDesigner/UndoRedo.pb"
+XIncludeFile "FormDesigner/HelpingFunctions.pb"
+XIncludeFile "FormDesigner/GadgetItemsWindow.pb"
+XIncludeFile "FormDesigner/ImagesListWindow.pb"
+XIncludeFile "FormDesigner/SplitterWindow.pb"
+XIncludeFile "FormDesigner/CodeViewer.pb"
+XIncludeFile "FormDesigner/MainEvents.pb"
+XIncludeFile "FormDesigner/CopyPaste.pb"
+XIncludeFile "FormDesigner/OpenSave.pb"
+XIncludeFile "FormDesigner/MainWindow.pb"
 XIncludeFile "FormDesigner/FormManagement.pb"
 XIncludeFile "SourceManagement.pb"
 XIncludeFile "SourceParser.pb"
@@ -215,8 +215,8 @@ XIncludeFile "HelpViewer.pb"
 ; macos specific
 XIncludeFile "MacMisc.pb"
 
-; hilightning files
-XIncludeFile "ScintillaHilightning.pb"
+; highlighting files
+XIncludeFile "ScintillaHighLighting.pb"
 XIncludeFile "CodeViewer.pb"
 XIncludeFile "DisplayMacroError.pb"
 XIncludeFile "Templates.pb"

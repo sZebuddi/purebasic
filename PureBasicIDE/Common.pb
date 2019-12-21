@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -7,7 +7,7 @@
 
 
 ; indicates that we are compiling IDE
-; used for portable code like the HilightningEngine.or the FormDesigner
+; used for portable code like the HighLightingEngine.or the FormDesigner
 ;
 #PUREBASIC_IDE = 1
 
@@ -22,7 +22,7 @@ CompilerIf #SpiderBasic
 CompilerEndIf
 
 ;
-;- Hilightning Colors
+;- HighLighting Colors
 ;
 ; Colors now managed in an array for easier extension and less code
 ;
@@ -2492,7 +2492,7 @@ Global UpdateCheckInterval, UpdateCheckVersions, LastUpdateCheck
 ; Hilighgtning:
 ;
 Global EditorFontName$, EditorFontSize, EditorFontStyle, EditorFontStyle$, EditorFontID, EditorBoldFontID
-Global IsHilightningReady, HilightGadgetID, LineNumbersCursor, EditorBoldFontName$
+Global IsHighLightingReady, HilightGadgetID, LineNumbersCursor, EditorBoldFontName$
 Global MarkProcedureBackground
 
 
@@ -2504,7 +2504,7 @@ Global AlwaysHideLog, ErrorLogVisible
 Global CustomKeywordFile$
 Global ToolsPanelUseFont, ToolsPanelUseColors
 
-; OS specific hilightning color representation:
+; OS specific highlighting color representation:
 ;
 Global *ASMKeywordColor, *BackgroundColor, *BasicKeywordColor, *CommentColor, *ConstantColor, *LabelColor
 Global *NormalTextColor, *NumberColor, *OperatorColor, *PointerColor, *PureKeywordColor, *SeparatorColor, *CustomKeywordColor

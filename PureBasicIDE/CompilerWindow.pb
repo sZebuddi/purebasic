@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -96,11 +96,11 @@ Procedure CompilerReady()
   If *CurrentCompiler = @DefaultCompiler
     HistoryCompilerLoaded()
     
-    InitSyntaxHilightning()
+    InitSyntaxHighLighting()
     
     ; Set up the os specific color values
     ;
-    SetUpHilightningColors()
+    SetUpHighLightingColors()
     
     ; do this before scanning, as it affects saved data (known constants etc)
     InitStructureViewer()
@@ -121,7 +121,7 @@ Procedure CompilerReady()
           UpdateFolding(@FileList(), 0, -1)               ; redo all folding
           
           SetBackgroundColor()
-          UpdateHilightning()
+          UpdateHighLighting()
         EndIf
       Next FileList()
       
@@ -489,6 +489,13 @@ EndProcedure
 Procedure BuildWindowEvents(EventID)
   Quit = 0
   
+  If EventID = #PB_Event_Menu     ; Little wrapper to map the shortcut events (identified as menu)
+    EventID  = #PB_Event_Gadget   ; to normal gadget events...
+    GadgetID = EventMenu()
+  Else
+    GadgetID = EventGadget()
+  EndIf
+  
   If EventID = #PB_Event_Gadget
     Select EventGadget()
       Case #GADGET_Build_Targets
@@ -558,7 +565,11 @@ Procedure BuildWindowEvents(EventID)
         ForEver
         
       Case #GADGET_Build_Close
-        Quit = 1
+        ; CompilerBusy goes to 0 after each target
+        ; UseProjectBuildWindow goes to 0 when all are done
+        If (Not CompilerBusy) And (Not UseProjectBuildWindow)
+          Quit = 1
+        EndIf
         
     EndSelect
     
@@ -1217,7 +1228,7 @@ Procedure CreateExecutable()
             File$+Extension$
           EndIf
           
-          ; If the name of the exe has changed, we need to re-save the file (http://www.purebasic.fr/english/viewtopic.php?f=4&t=59806)
+          ; If the name of the exe has changed, we need to re-save the file (https://www.purebasic.fr/english/viewtopic.php?f=4&t=59806)
           ;
           If *ActiveSource\ExecutableName$ <> File$
             *ActiveSource\ExecutableName$ = File$

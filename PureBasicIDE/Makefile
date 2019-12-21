@@ -215,11 +215,11 @@ nocompile :  $(TARGET)/dummy VERSION  $(DEPENDENCIES)
 $(TARGET)/images.pak :  $(TARGET)/dummy $(STARTUPIMAGE) $(ABOUTIMAGE) $(TARGET)/ToolsPanelRight.$(ICON) $(TARGET)/ToolsPanelLeft.$(ICON) $(TARGET)/CloseButton.$(ICON) data/EmptySpace.png data/MissingIcon.png $(PBPACK)
 	$(PBPACK) $(PACKLEVEL) $(TARGET)/images.pak $(STARTUPIMAGE) $(ABOUTIMAGE) $(TARGET)/ToolsPanelRight.$(ICON) $(TARGET)/ToolsPanelLeft.$(ICON) $(TARGET)/CloseButton.$(ICON) data/EmptySpace.png data/MissingIcon.png
 
-$(PBPACK) : tools/pbpack.pb $(TARGET)/dummy
-	$(PBCOMPILER) tools/pbpack.pb $(MAKEEXE) $(PBPACK) $(PBPACKFLAGS)
+$(PBPACK) : tools/PBPack.pb $(TARGET)/dummy
+	$(PBCOMPILER) tools/PBPack.pb $(MAKEEXE) $(PBPACK) $(PBPACKFLAGS)
 
-$(MAKEBUILDINFO) : tools/makebuildinfo.pb $(TARGET)/dummy
-	$(PBCOMPILER) tools/makebuildinfo.pb $(MAKEEXE) $(MAKEBUILDINFO) $(PBPACKFLAGS)
+$(MAKEBUILDINFO) : tools/MakeBuildInfo.pb $(TARGET)/dummy
+	$(PBCOMPILER) tools/MakeBuildInfo.pb $(MAKEEXE) $(MAKEBUILDINFO) $(PBPACKFLAGS)
 
 $(TARGET)/%.ico : ../PureBasicDebugger/Data/%.png $(TARGET)/dummy
 	tools/png2ico.exe $@ $<
@@ -262,8 +262,8 @@ $(DIALOGCOMPILER) : ../DialogManager/DialogCompiler.pb $(TARGET)/dummy
 #
 ifeq ($(PB_WINDOWS),1)
 
-$(TARGET)/makeversion.exe : tools/makeversion.pb $(TARGET)/dummy
-	$(PBCOMPILER) tools/makeversion.pb /EXE $(TARGET)/makeversion.exe /CONSOLE
+$(TARGET)/makeversion.exe : tools/MakeVersion.pb $(TARGET)/dummy
+	$(PBCOMPILER) tools/MakeVersion.pb /EXE $(TARGET)/makeversion.exe /CONSOLE
 
 VERSION: $(TARGET)/makeversion.exe $(TARGET)/dummy
 	$(TARGET)/makeversion.exe ide $(TARGET)/VersionInfo.rc $(shell PWD)/$(ICOSOURCEFILE)
@@ -308,8 +308,8 @@ endif
 #
 ifeq ($(PB_MACOS),1)
 
-$(MACPLIST) : tools/macplist.pb $(TARGET)/dummy
-	$(PBCOMPILER) tools/macplist.pb -e $(MACPLIST)
+$(MACPLIST) : tools/MacPlist.pb $(TARGET)/dummy
+	$(PBCOMPILER) tools/MacPlist.pb -e $(MACPLIST)
 
 endif
 

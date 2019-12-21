@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -2112,7 +2112,7 @@ Procedure ResizeMainWindow()
   If ShowMainToolbar
     EditTop = ToolbarTopOffset
     CompilerIf #CompileLinux
-      ; On linux the toolbar can accept any sized icon, so use a dynamic height (http://www.purebasic.fr/english/viewtopic.php?f=23&t=48951)
+      ; On linux the toolbar can accept any sized icon, so use a dynamic height (https://www.purebasic.fr/english/viewtopic.php?f=23&t=48951)
       EditHeight = EditorWindowHeight - ToolBarHeight(#TOOLBAR) - StatusbarHeight - MenuHeight
     CompilerElse
       EditHeight = EditorWindowHeight - ToolbarHeight - StatusbarHeight - MenuHeight
@@ -2269,7 +2269,7 @@ Procedure EventLoopCallback()
             CompilerEndIf
             
             CompilerIf #CompileWindows
-              SendMessage_(GadgetID(*ActiveSource\EditorGadget), #WM_LBUTTONUP, 0, 0) ; simulate a mouseup to fix the ugly selection problem (http://www.purebasic.fr/english/viewtopic.php?f=4&t=50135)
+              SendMessage_(GadgetID(*ActiveSource\EditorGadget), #WM_LBUTTONUP, 0, 0) ; simulate a mouseup to fix the ugly selection problem (https://www.purebasic.fr/english/viewtopic.php?f=4&t=50135)
             CompilerEndIf
             
             JumpToProcedure()

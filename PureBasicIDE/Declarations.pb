@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -109,8 +109,8 @@ CompilerEndIf
 ; Editor specific files
 ; ===========================================
 
-;- RichEditHilightning.pb
-;- ScintillaHilightning.pb
+;- RichEditHighLighting.pb
+;- ScintillaHighLighting.pb
 ;
 ;Declare SendEditorMessage(Message, wParam, lParam)
 
@@ -124,10 +124,10 @@ Declare CountCharacters(Gadget, startPos, endPos)  ; Fix for the #SCI_COUNTCHARA
 Declare BuildIndentVT()
 Declare UpdateIndent(FirstLine, LastLine)
 Declare UpdateFolding(*Source.SourceFile, firstline, lastline) ; redo all folding (no rescan) from the given line to atleast lastline
-Declare CalculateHilightningColors()                           ; calculate really used colors (call once after a prefs load/update)
-Declare SetUpHilightningColors()                               ; set up the colors for hilighnint (called for each source when the prefs change, or when loading)
+Declare CalculateHighLightingColors()                           ; calculate really used colors (call once after a prefs load/update)
+Declare SetUpHighLightingColors()                               ; set up the colors for hilighnint (called for each source when the prefs change, or when loading)
 Declare HilightArea(*StartPos, *EndPos)                        ; hilight a given area of text (0, -1) hilights all!
-Declare UpdateHilightning()                                    ; hilight everything after a prefs update
+Declare UpdateHighLighting()                                    ; hilight everything after a prefs update
 Declare StreamTextIn(*Buffer, Length)                          ; put the given buffer into the current source
 Declare StreamTextOut(*Buffer, Length)                         ; get the contents of the current source into the buffer
 Declare GetSourceLength()                                      ; get the source length in bytes
@@ -384,15 +384,15 @@ Declare OpenGrepWindow()
 Declare UpdateGrepWindow()
 Declare GrepWindowEvents(EventID)
 
-;- HilightningEngine.pb
+;- HighLightingEngine.pb
 ;
 Declare InitSyntaxCheckArrays()       ; create arrays like the ValidCharacters of TriggerCharacters
-Declare InitSyntaxHilightning()       ; initialize the hilightning
+Declare InitSyntaxHighLighting()       ; initialize the highlighting
 Declare BuildCustomKeywordTable()     ; build the needed HT etc from the CustomKeywordList() list and file
-Declare HilightningEngine(*InBuffer, InBufferLength, CursorPosition, *HilightCallback, IsSourceCode) ; call the engine
+Declare HighLightingEngine(*InBuffer, InBufferLength, CursorPosition, *HilightCallback, IsSourceCode) ; call the engine
 Declare IsBasicKeyword(Word$, *LineStart = 0, *WordStart = 0)
 
-;- HilightningFunctions.pb
+;- HighLightingFunctions.pb
 ;
 Declare GetWordBoundary(*Buffer, BufferLength, Position, *StartIndex.INTEGER, *EndIndex.INTEGER, Mode)   ; Retrieve the boundary of a word
 Declare.s GetWord(*Buffer, BufferLength, Position)                                                       ; extract the word at position from *Buffer

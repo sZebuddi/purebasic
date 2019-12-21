@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -18,7 +18,7 @@ Procedure.s RecentFiles_EntryString(Index)
     
   Else ; its a source file
     
-    ProcedureReturn RSet(Str(Index), Len(Str(FilesHistorySize))) + ")  " + RecentFiles(Index) ; Display full path here, to avoid issue if some files gets same name (ie: main.pb) http://www.purebasic.fr/english/viewtopic.php?f=3&t=60650
+    ProcedureReturn RSet(Str(Index), Len(Str(FilesHistorySize))) + ")  " + RecentFiles(Index) ; Display full path here, to avoid issue if some files gets same name (ie: main.pb) https://www.purebasic.fr/english/viewtopic.php?f=3&t=60650
     
   EndIf
   

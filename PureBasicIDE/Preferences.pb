@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -177,7 +177,7 @@ Procedure LoadPreferences()
   Next i
   
   ; calc which colors are actually used for display
-  CalculateHilightningColors()
+  CalculateHighLightingColors()
   
   EditorFontName$   = ReadPreferenceString("EditorFontName", DefaultEditorFontName$)
   EditorFontSize    = ReadPreferenceLong  ("EditorFontSize", #DEFAULT_EditorFontSize)
@@ -1139,7 +1139,7 @@ Procedure SavePreferences()
     
     NbSavedWords = 0
     For i = 1 To NbFoldStartWords
-      ; Avoid writing duplicate (http://www.purebasic.fr/english/viewtopic.php?f=4&t=55717)
+      ; Avoid writing duplicate (https://www.purebasic.fr/english/viewtopic.php?f=4&t=55717)
       If i = 1  Or FoldStart$(i) <> FoldStart$(i-1)
         NbSavedWords+1
         WritePreferenceString("Start_"+Str(NbSavedWords), FoldStart$(i))
@@ -1149,7 +1149,7 @@ Procedure SavePreferences()
     
     NbSavedWords = 0
     For i = 1 To NbFoldEndWords
-      ; Avoid writing duplicate (http://www.purebasic.fr/english/viewtopic.php?f=4&t=55717)
+      ; Avoid writing duplicate (https://www.purebasic.fr/english/viewtopic.php?f=4&t=55717)
       If i = 1  Or FoldEnd$(i) <> FoldEnd$(i-1)
         NbSavedWords+1
         WritePreferenceString("End_"+Str(NbSavedWords), FoldEnd$(i))
@@ -2557,7 +2557,7 @@ Procedure ApplyPreferences()
   SortCompilers()
   
   ; calc which colors are actually used for display
-  CalculateHilightningColors()
+  CalculateHighLightingColors()
   
   ; update all syntax hilighthing
   ;
@@ -2571,10 +2571,10 @@ Procedure ApplyPreferences()
       UpdateFolding(@FileList(), 0, -1)               ; redo all folding
       
       If EnableColoring
-        SetUpHilightningColors() ; needed for every gadget individually now (scintilla)
+        SetUpHighLightingColors() ; needed for every gadget individually now (scintilla)
         SetBackgroundColor()
         SetLineNumberColor()
-        UpdateHilightning()   ; hilight everything after a prefs update
+        UpdateHighLighting()   ; hilight everything after a prefs update
       Else
         RemoveAllColoring()
       EndIf

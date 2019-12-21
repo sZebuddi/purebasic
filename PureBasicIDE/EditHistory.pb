@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -1623,7 +1623,7 @@ CompilerIf #CompileWindows
                 EditHistoryDialog\Close()
               EndIf
               
-              EditHistoryDialog = 0 ; Important on OS X to put back the pointer to null after closing, as it can be called in the resize callback (http://www.purebasic.fr/english/viewtopic.php?f=24&t=59703&start=60)
+              EditHistoryDialog = 0 ; Important on OS X to put back the pointer to null after closing, as it can be called in the resize callback (https://www.purebasic.fr/english/viewtopic.php?f=24&t=59703&start=60)
               
               ; clear the display cache
               ForEach EventSourceCache()

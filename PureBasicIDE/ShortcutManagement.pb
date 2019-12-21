@@ -1,5 +1,5 @@
 ﻿;--------------------------------------------------------------------------------------------
-;  Copyright (c) Fantaise Software. All rights reserved.
+;  Copyright (c) Fantaisie Software. All rights reserved.
 ;  Dual licensed under the GPL and Fantaisie Software licenses.
 ;  See LICENSE and LICENSE-FANTAISIE in the project root for license information.
 ;--------------------------------------------------------------------------------------------
@@ -634,7 +634,7 @@ CompilerIf #CompileLinux | #CompileWindows
   #SHORTCUT_Copy               = #PB_Shortcut_Control | #PB_Shortcut_C
   #SHORTCUT_Paste              = #PB_Shortcut_Control | #PB_Shortcut_V
   #SHORTCUT_CommentSelection   = #PB_Shortcut_Control | #PB_Shortcut_B
-  #SHORTCUT_UnCommentSelection = #PB_Shortcut_Control | #PB_Shortcut_Shift | #PB_Shortcut_B ; Avoid 'Alt+B' shorcut as it conflict with german menu title: http://www.purebasic.fr/english/viewtopic.php?f=23&t=37098
+  #SHORTCUT_UnCommentSelection = #PB_Shortcut_Control | #PB_Shortcut_Shift | #PB_Shortcut_B ; Avoid 'Alt+B' shorcut as it conflict with german menu title: https://www.purebasic.fr/english/viewtopic.php?f=23&t=37098
   #SHORTCUT_SelectAll          = #PB_Shortcut_Control | #PB_Shortcut_A
   #SHORTCUT_Goto               = #PB_Shortcut_Control | #PB_Shortcut_G
   #SHORTCUT_JumpToKeyword      = #PB_Shortcut_Control | #PB_Shortcut_K
